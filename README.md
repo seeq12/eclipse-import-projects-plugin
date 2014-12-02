@@ -14,6 +14,8 @@ When launching Eclipse, add the `-import <root project folder>` command line par
 cause Eclipse to recursively search the supplied folder for .project files and import them into
 the workspace. If they are already present in the workspace, they will be refreshed.
 
+You can supply multiple `-import` directives to import multiple folders. E.g. `-import <folder 1> -import <folder 2>`.
+
 ## License
 
 MIT License
