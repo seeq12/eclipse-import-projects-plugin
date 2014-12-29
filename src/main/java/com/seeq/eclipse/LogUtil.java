@@ -37,6 +37,5 @@ public class LogUtil {
     public static void log(IStatus status) {
         ILog log = Activator.getDefault().getLog();
         log.log(status);
-        //NodeclipseConsole.write(status.getMessage()+"\n");
     }
 }

@@ -16,6 +16,31 @@ the workspace. If they are already present in the workspace, they will be refres
 
 You can supply multiple `-import` directives to import multiple folders. E.g. `-import <folder 1> -import <folder 2>`.
 
+## Supported Configurations
+
+This plugin has been tested with Eclipse Kepler (4.3) and Luna (4.4) against Java 7 and 8. It will probably
+work with other configurations but they haven't been tested.
+
+## Building
+
+This plugin builds using Maven. It has been tested with Maven 3.2.3.
+
+With Maven on your path, execute `mvn package` from the root of the repository. The target
+folder will contain the resulting jar file.
+
+## Debugging
+
+You can debug this plugin from Eclipse using the Plugin Development Environment. Take the following steps:
+
+1. Create the Eclipse project files from Maven by executing `mvn eclipse:eclipse` at the root of the repo.
+2. Install the "Eclipse for RCP and RAP Developers" edition of Eclipse and launch it.
+3. Import the plugin project via `File > Import... > General > Existing Projects into Workspace`.
+4. Open up `ImportProjects.java` and put a breakpoint in `earlyStartup()`.
+5. Select `Run > Debug Configurations...` and click `Eclipse Application`.
+6. Press the `New` button to create a new debug configuration. Call it whatever you like.
+7. Click on the `Arguments` tab and add an `-import <dir>` directive to the `Program arguments` section.
+8. Click on `Apply` and then `Debug` and you should hit your breakpoint.
+
 ## License
 
 MIT License
