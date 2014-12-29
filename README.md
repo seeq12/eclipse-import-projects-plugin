@@ -12,9 +12,12 @@ Place the com.seeq.eclipse.importprojects JAR file in the eclipse/plugins folder
 
 When launching Eclipse, add the `-import <root project folder>` command line parameter. This will
 cause Eclipse to recursively search the supplied folder for .project files and import them into
-the workspace. If they are already present in the workspace, they will be refreshed.
+the workspace. If they are already present in the workspace, they will be refreshed. The path supplied
+must be an absolute path.
 
 You can supply multiple `-import` directives to import multiple folders. E.g. `-import <folder 1> -import <folder 2>`.
+
+The plugin will log activity and any errors to the Eclipse *Error Log* view (`Window > Show View > Other > Error Log`).
 
 ## Supported Configurations
 
