@@ -54,7 +54,7 @@
                 <version>2.5</version>
                 <configuration>
                     <archive>
-                        <manifestFile>META-INF/MANIFEST.MF</manifestFile>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                     </archive>
                     <finalName>${project.groupId}.${project.artifactId}_${project.version}</finalName>
                 </configuration>
