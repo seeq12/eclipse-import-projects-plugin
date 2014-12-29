@@ -5,7 +5,7 @@
     <groupId>com.seeq.eclipse</groupId>
     <artifactId>importprojects</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 
     <name>eclipse-import-projects-plugin</name>
     <url>http://www.seeq.com</url>
@@ -54,7 +54,7 @@
                 <version>2.5</version>
                 <configuration>
                     <archive>
-                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                        <manifestFile>META-INF/MANIFEST.MF</manifestFile>
                     </archive>
                     <finalName>${project.groupId}.${project.artifactId}_${project.version}</finalName>
                 </configuration>
@@ -74,6 +74,7 @@
                 </executions>
                 <extensions>true</extensions>
                 <configuration>
+                    <manifestLocation>META-INF</manifestLocation>
                     <instructions>
                         <Bundle-SymbolicName>${project.groupId}.importprojects;singleton:=true</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
