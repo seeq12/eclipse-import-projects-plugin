@@ -15,7 +15,7 @@ public class ImportProjects implements org.eclipse.ui.IStartup {
 
 	private String[] getImportPaths() {
         BundleContext context = Activator.getContext();
-        ServiceReference<?> ser = context.getServiceReference(IApplicationContext.class);
+        ServiceReference<?> ser = context.getServiceReference(IApplicationContext.class.getName());
         IApplicationContext iac = (IApplicationContext) context.getService(ser);
         String[] args = (String[]) iac.getArguments().get(IApplicationContext.APPLICATION_ARGS);
         List<String> importPath = new ArrayList<String>();
