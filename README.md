@@ -21,8 +21,8 @@ The plugin will log activity and any errors to the Eclipse *Error Log* view (`Wi
 
 ## Supported Configurations
 
-This plugin has been tested with Eclipse Kepler (4.3) and Luna (4.4) against Java 7 and 8. It will probably
-work with other configurations but they haven't been tested.
+This plugin has been tested with Eclipse Helios (4.2), Kepler (4.3), Luna (4.4) and Mars (4.5) against Java 7 and 8. 
+It will probably work with other configurations but they haven't been tested.
 
 ## Building
 
