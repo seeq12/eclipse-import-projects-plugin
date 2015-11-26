@@ -38,11 +38,13 @@ You can debug this plugin from Eclipse using the Plugin Development Environment.
 1. Create the Eclipse project files from Maven by executing `mvn eclipse:eclipse` at the root of the repo.
 2. Install the "Eclipse for RCP and RAP Developers" edition of Eclipse and launch it.
 3. Import the plugin project via `File > Import... > General > Existing Projects into Workspace`.
-4. Open up `ImportProjects.java` and put a breakpoint in `earlyStartup()`.
-5. Select `Run > Debug Configurations...` and click `Eclipse Application`.
-6. Press the `New` button to create a new debug configuration. Call it whatever you like.
-7. Click on the `Arguments` tab and add an `-import <dir>` directive to the `Program arguments` section.
-8. Click on `Apply` and then `Debug` and you should hit your breakpoint.
+4. Go to `Preferences > Java > Build Path > Classpath Variables` and add an `M2_REPO` variable if it
+   doesn't already exist. It should point to your local Maven repository, which by default is `~/.m2/repository`. 
+5. Open up `ImportProjects.java` and put a breakpoint in `earlyStartup()`.
+6. Select `Run > Debug Configurations...` and click `Eclipse Application`.
+7. Press the `New` button to create a new debug configuration. Call it whatever you like.
+8. Click on the `Arguments` tab and add an `-import <dir>` directive to the `Program arguments` section.
+9. Click on `Apply` and then `Debug` and you should hit your breakpoint.
 
 ## License
 
