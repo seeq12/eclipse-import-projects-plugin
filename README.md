@@ -15,6 +15,8 @@ cause Eclipse to recursively search the supplied folder for .project files and i
 the workspace. If they are already present in the workspace, they will be refreshed. The path supplied
 must be an absolute path.
 
+Folder path mast be absolute.
+
 You can supply multiple `-import` directives to import multiple folders. E.g. `-import <folder 1> -import <folder 2>`.
 
 The plugin will log activity and any errors to the Eclipse *Error Log* view (`Window > Show View > Other > Error Log`).
