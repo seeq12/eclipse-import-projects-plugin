@@ -25,7 +25,7 @@ The aforementioned usage will import the projects on eclipse startup and will ut
 To perform a headless-import that does not actually start the IDE, run with `-application com.seeq.eclipse.importprojects.headlessimport`.
 
 ```
-eclipsec.exe -nosplash -application com.seeq.eclipse.importprojects.headlessimport -data "C:/dn/pce-2.5.10/eclipse" -import $eclipse_project_folder
+eclipsec.exe -nosplash -application com.seeq.eclipse.importprojects.headlessimport -data <workspace-folder> -import <import-folder>
 ```
 
 ## Supported Configurations
