@@ -19,6 +19,15 @@ You can supply multiple `-import` directives to import multiple folders. E.g. `-
 
 The plugin will log activity and any errors to the Eclipse *Error Log* view (`Window > Show View > Other > Error Log`).
 
+### Headless
+
+The aforementioned usage will import the projects on eclipse startup and will utimately place you in the IDE.
+To perform a headless-import that does not actually start the IDE, run with `-application com.seeq.eclipse.importprojects.headlessimport`.
+
+```
+eclipsec.exe -nosplash -application com.seeq.eclipse.importprojects.headlessimport -data "C:/dn/pce-2.5.10/eclipse" -import $eclipse_project_folder
+```
+
 ## Supported Configurations
 
 This plugin has been tested with Eclipse Helios (4.2), Kepler (4.3), Luna (4.4) and Mars (4.5) against Java 7 and 8. 
