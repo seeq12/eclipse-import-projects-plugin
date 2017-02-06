@@ -5,5 +5,17 @@
    <extension point="org.eclipse.ui.startup">
       <startup class="com.seeq.eclipse.ImportProjects"/>
    </extension>
-
+   <extension
+       id="headlessimport"
+       name="Headless Import"
+       point="org.eclipse.core.runtime.applications">
+       <application
+           cardinality="singleton-global"
+           thread="main"
+           visible="true">
+           <run
+               class="com.seeq.eclipse.HeadlessImportApplication">
+           </run>
+       </application>
+   </extension>
 </plugin>
