@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.seeq.eclipse.importprojects.feature_1.4.0.qualifier.jar" 
+  					  id="com.seeq.eclipse.importprojects.feature" version="1.4.0.qualifier">
+      <category name="tools"/>
+   </feature>
+   <category-def name="tools" label="Tools"/>
+</site>

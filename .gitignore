@@ -1,5 +1,7 @@
-/.settings
-/target
-/META-INF
-/.classpath
-/.project
+bin
+target
+.settings
+.classpath
+.project
+# maven/tycho temporarily generated
+.polyglot.build.properties
