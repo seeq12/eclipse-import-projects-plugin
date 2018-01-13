@@ -55,7 +55,7 @@ The target
 folder will contain the resulting jar file.
 
 Note that this will overwrite `META-INF/MANIFEST.MF` file content,
-so you would need to revert it back is using maven/tycho build.
+so you would need to revert it back if using maven/tycho build.
 
 
 ## Debugging
