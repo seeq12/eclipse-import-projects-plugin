@@ -23,6 +23,7 @@ The plugin will log activity and any errors to the Eclipse *Error Log* view (`Wi
 
 The aforementioned usage will import the projects on eclipse startup and will utimately place you in the IDE.
 To perform a headless-import that does not actually start the IDE, run with `-application com.seeq.eclipse.importprojects.headlessimport`.
+On Windows use `eclipsec` instead of `eclipse` launcher.
 
 ```
 eclipsec.exe -nosplash -application com.seeq.eclipse.importprojects.headlessimport -data <workspace-folder> -import <import-folder>
