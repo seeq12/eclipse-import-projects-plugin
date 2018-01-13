@@ -36,10 +36,27 @@ It will probably work with other configurations but they haven't been tested.
 
 ## Building
 
-This plugin builds using Maven. It has been tested with Maven 3.2.3.
+This plugin builds using Maven. It has been tested with Maven 3.2.3+.
 
-With Maven on your path, execute `mvn package` from the root of the repository. The target
+With Maven on your path, execute `mvn package` from the root of the repository.
+
+The update site will be under `eclipse-import-projects.site/target`.
+
+### Building as OSGi bundle
+
+This way has been used from the very beginning of this plugin development.
+The content of `eclipse-import-projects.plugin` folder is enough.
+Original `pom.xml` was renamed to not conflict with maven/tycho build.
+
+    cd eclipse-import-projects.plugin
+    mvn -f pom-osgi.xml package
+
+The target
 folder will contain the resulting jar file.
+
+Note that this will overwrite `META-INF/MANIFEST.MF` file content,
+so you would need to revert it back is using maven/tycho build.
+
 
 ## Debugging
 
