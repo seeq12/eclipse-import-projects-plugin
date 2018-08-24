@@ -17,9 +17,12 @@ must be an absolute path.
 
 You can also supply `-importPreferences exported.epf` to import Eclipse preferences exported earlier.
 
-You can supply multiple `-importProjet` an `-importPreferences` directives to import multiple folders. E.g.
-`-importProject projectFolder1 -importProject projectFolder2`, `-importPreferences prefs1.epf -importPreferences
-prefs2.epf` or even `-importProject projectFolder -importPreferences prefs.epf`.
+Additionally it's possible to supply multiple `-importProjet` and `-importPreferences` directives to import multiple
+folders and/or preferences.
+
+- `-importProject projectFolder1 -importProject projectFolder2`
+- `-importPreferences prefs1.epf -importPreferences prefs2.epf` or even
+- `-importProject projectFolder -importPreferences prefs.epf`.
 
 The plugin will log activity and any errors to the Eclipse *Error Log* view (`Window > Show View > Other > Error Log`).
 
@@ -47,6 +50,12 @@ java -jar eclipse-jee-mars-1.0.2/plugins/org.eclipse.equinox.launcher_$VERSION.j
 
 This plugin has been tested with Eclipse Helios (4.2), Kepler (4.3), Luna (4.4) and Mars (4.5) against Java 7 and 8.
 It will probably work with other configurations but they haven't been tested.
+
+
+## Breaking Changes with 2.0.0
+
+2.0.0, which also introduced preference imports, changed the `-import` parameter for importing projects to
+`-importProjects` to match `-importPreferences`.
 
 ## Building
 
