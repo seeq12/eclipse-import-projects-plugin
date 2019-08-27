@@ -1,6 +1,6 @@
 # Eclipse Import Projects Plug-in
 
-This plug-in allows import of projects an preferences using Eclipse command-line parameters. It is useful
+This plug-in allows import of projects and preferences using Eclipse command-line parameters. It is useful
 in situations where Maven is producing the .project files and Eclipse would ideally import/refresh
 them when launched or for Eclipse provisioning.
 
@@ -20,7 +20,7 @@ You can also supply `-importPreferences exported.epf` to import Eclipse preferen
 Additionally it's possible to supply multiple `-importProjet` and `-importPreferences` directives to import multiple
 folders and/or preferences.
 
-- `-importProject projectFolder1 -importProject projectFolder2`
+- `-importProject projectFolder1 -importProjects projectFolder2`
 - `-importPreferences prefs1.epf -importPreferences prefs2.epf` or even
 - `-importProject projectFolder -importPreferences prefs.epf`.
 

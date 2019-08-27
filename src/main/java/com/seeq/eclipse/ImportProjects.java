@@ -12,7 +12,7 @@ import org.osgi.framework.*;
 public class ImportProjects implements org.eclipse.ui.IStartup {
 
     private static final String ARG_PROJECTS = "-importProject";
-    private static final String ARG_PREFEENCES = "-importPreferences";
+    private static final String ARG_PREFERENCES = "-importPreferences";
 
     private String[] getImportPaths(String applicationArg) {
 
@@ -86,7 +86,7 @@ public class ImportProjects implements org.eclipse.ui.IStartup {
             }
         }//for importPath
 
-        for(String importFile: this.getImportPaths(ARG_PREFEENCES)) {
+        for(String importFile: this.getImportPaths(ARG_PREFERENCES)) {
 
             try {
                 Platform.getPreferencesService().importPreferences(new FileInputStream(importFile));
