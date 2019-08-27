@@ -17,10 +17,10 @@ must be an absolute path.
 
 You can also supply `-importPreferences exported.epf` to import Eclipse preferences exported earlier.
 
-Additionally it's possible to supply multiple `-importProjet` and `-importPreferences` directives to import multiple
+Additionally it's possible to supply multiple `-importProject` and `-importPreferences` directives to import multiple
 folders and/or preferences.
 
-- `-importProject projectFolder1 -importProjects projectFolder2`
+- `-importProject projectFolder1 -importProject projectFolder2`
 - `-importPreferences prefs1.epf -importPreferences prefs2.epf` or even
 - `-importProject projectFolder -importPreferences prefs.epf`.
 
@@ -55,7 +55,7 @@ It will probably work with other configurations but they haven't been tested.
 ## Breaking Changes with 2.0.0
 
 2.0.0, which also introduced preference imports, changed the `-import` parameter for importing projects to
-`-importProjects` to match `-importPreferences`.
+`-importProject` to match `-importPreferences`.
 
 ## Building
 
