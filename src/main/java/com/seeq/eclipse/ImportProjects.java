@@ -11,17 +11,21 @@ import org.osgi.framework.*;
 
 public class ImportProjects implements org.eclipse.ui.IStartup {
 
-    private static final String ARG_IMPORT = "-import";
+    private static final String ARG_PROJECTS = "-importProject";
+    private static final String ARG_PREFERENCES = "-importPreferences";
 
-	private String[] getImportPaths() {
+    private String[] getImportPaths(String applicationArg) {
+
         BundleContext context = Activator.getContext();
         ServiceReference<?> ser = context.getServiceReference(IApplicationContext.class.getName());
         IApplicationContext iac = (IApplicationContext) context.getService(ser);
         String[] args = (String[]) iac.getArguments().get(IApplicationContext.APPLICATION_ARGS);
+
         List<String> importPath = new ArrayList<String>();
+
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
-            if (arg.compareToIgnoreCase(ARG_IMPORT) == 0) {
+            if (arg.compareToIgnoreCase(applicationArg) == 0) {
                 i++;
                 if (i < args.length) {
                     importPath.add(args[i]);
@@ -56,7 +60,7 @@ public class ImportProjects implements org.eclipse.ui.IStartup {
     @Override
     public void earlyStartup() {
 
-        String[] importPaths = this.getImportPaths();
+        String[] importPaths = this.getImportPaths(ARG_PROJECTS);
 
         for (String importPath : importPaths) {
         	LogUtil.info(String.format("Searching for projects in %s", importPath));
@@ -81,5 +85,15 @@ public class ImportProjects implements org.eclipse.ui.IStartup {
                 }
             }
         }//for importPath
+
+        for(String importFile: this.getImportPaths(ARG_PREFERENCES)) {
+
+            try {
+                Platform.getPreferencesService().importPreferences(new FileInputStream(importFile));
+            } catch(Exception e){
+                LogUtil.error(String.format("Could not import file %s", importFile), e);
+            }
+
+        }
     }
 }
